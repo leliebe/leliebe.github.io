@@ -29,7 +29,7 @@ ul.nodot {
 }
 
 h1 {
-	margin:auto;
+	text-align:center;
 	font-family: "Garamond", serif;
 	font-size: 2em;
 }
@@ -42,7 +42,7 @@ h2 {
 }
 
 h2.center {
-	margin:auto;
+	text-align:center;
 	font-family: "Garamond", serif;
 	font-size: 1.7em;
 }
