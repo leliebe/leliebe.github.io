@@ -25,6 +25,7 @@ li.nav a:hover {
 }
 
 ul.nodot {
+	margin-left: 8%;
 	list-style-type: none;
 }
 
@@ -41,7 +42,7 @@ h2 {
 	font-size: 1.7em;
 }
 
-h2.center {
+h2.centered {
 	text-align:center;
 	font-family: "Garamond", serif;
 	font-size: 1.7em;
