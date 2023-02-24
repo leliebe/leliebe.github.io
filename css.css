@@ -30,24 +30,40 @@ ul.nodot {
 
 h1 {
 	align-content: center;
+	font-family: "Garamond", serif;
+	font-size: 2em;
 }
 
 h2 {
-	margin-left: 15%;
+	margin-left: 8%;
 	margin-right: 10%;
+	font-family: "Garamond", serif;
+	font-size: 1.7em;
+}
+
+h2.center {
+	align-content: center;
+	font-family: "Garamond", serif;
+	font-size: 1.7em;
 }
 
 h3 {
-	margin-left: 20%;
+	margin-left: 10%;
 	margin-right: 10%;
+	font-family: "Garamond", serif;
+	font-size: 1.5em;
 }
 
 h4 {
-	margin-left: 20%;
+	margin-left: 10%;
 	margin-right: 10%;
+	font-family: "Garamond", serif;
+	font-size: 1.3em;
 }
 
 p {
-	margin-left: 20%;
+	margin-left: 10%;
 	margin-right: 10%;
+	font-family: "Garamond", serif;
+	font-size: 1em;
 }
