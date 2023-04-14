@@ -115,3 +115,7 @@ h2.pedagogyH2 {
 h3.subhead {
 	text-align: center;
 }
+
+kbd {
+    background-color: #BFC9ED;
+}
