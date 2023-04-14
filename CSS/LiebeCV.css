@@ -67,6 +67,14 @@ h4 {
 	color: #931F1D;
 }
 
+h5 {
+	margin-left: 10%;
+	margin-right: 12%
+	font-family: "Garamond", serif;
+	font-size: 1.2em;
+	color: #271033;
+}
+
 p {
 	margin-left: 7%;
 	margin-right: 10%;

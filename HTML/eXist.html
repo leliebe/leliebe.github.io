@@ -14,7 +14,7 @@
       <li class="nav"><a href="gamedev.html">Game Development</a></li>
     </ul>
 <h1>Building Your First eXistDB Application</h1>
-<p><em>Note: The following materials have been adapted from materials originally created for the <a href="https://pittsburgh-neh-institute.github.io/Institute-Materials-2020/">NEH Institute on Advanced Digital Editing</a> (2022).</em></p>
+<p><em>Note: The following materials have been lightly adapted from materials originally created for the <a href="https://pittsburgh-neh-institute.github.io/Institute-Materials-2020/">NEH Institute on Advanced Digital Editing</a> (2022).</em></p>
 <h2>Installing software</h2>
 <div>
 <h3>MacOS</h3>
@@ -120,6 +120,14 @@
   <h4>Add Your Data</h4>
   <p>Once you have a working app, you can upload your project's .xml files to the "data" folder of your app's git repo. If needed, you can create subfolders for clearer organization.</p>
   <h4>Add A Controller</h4>
-  <p>Copy the <em>controller.xql</em> file from the P4H GitHub repo to the root directory of your git repo.</p>
+  <p>Copy the <em>controller.xql</em> file from the P4H GitHub repo (in "Sample Code"-->"XQuery") to the root directory of your git repo.</p>
+  <h4>Create actions</h4>
+  <p>We will be creating both a "model" and a "view" file for every action we want to perform or every page we want to build.</p>
+  <p>The controller file requires that the "model" name be the name of the action (e.g. "index.xql") and the "view" name to add "-to-html" to the model name (e.g. "index-to-html.xql").</p>
+  <h5>Create files for models</h5>
+  <p>In the root directory of your git repo, create a folder called "modules". This is where you will save all of your models.</p>
+  <h5>Create files for views</h5>
+  <p>In the root directory of your git repo, create a folder called "views". This is where you will save all of your views.</p>
+</div>
 </body>
 </html>
