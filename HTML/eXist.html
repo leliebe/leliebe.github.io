@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Building eXistDB Apps</title>
+    <meta charset="utf-8">
+    <link href="../CSS/LiebeCV.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="nav"><a href="../index.html">Home</a></li>
+      <li class="nav"><a href="publications.html">Publications</a></li>
+      <li class="nav"><a href="pedagogy.html">Pedagogy</a></li>
+      <li class="nav"><a href="DigiEd.html">Digital Editions</a></li>
+      <li class="nav"><a href="gamedev.html">Game Development</a></li>
+    </ul>
+<h1>Building Your First eXistDB Application</h1>
+<p><em>Note: The following materials have been adapted from materials originally created for the <a href="https://pittsburgh-neh-institute.github.io/Institute-Materials-2020/">NEH Institute on Advanced Digital Editing</a> (2022).</em></p>
+<h2>Installing software</h2>
+<div>
+<h3>MacOS</h3>
+<h4>Install Homebrew</h4>
+<p>Homebrew will allow you to install other packages that we will need throughout the process.</p>
+<p>From the command line, you will run the following code. <em>Note: You may need to run this under an administrative account or using "sudo".</em></p>
+<p><kbd>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</kbd></p>
+<h4>Install NPM and NVM</h4>
+<p>These programs will allow you to work in different releases of nodejs.</p>
+<p>From the command line, run the following commands in order.</p>
+<ol class="instructions">
+<li>Install NPM with <kbd>brew install npm</kbd>. If this does not work, try <kbd>brew install nodejs.commandline</kbd> first.</li>
+<li>Install NVM with <kbd>brew install nvm</kbd>.</li>
+<li>Run <kbd>brew info nvm</kbd> <em>and follow the instructions on the screen</em>.
+<li>Install node v. 14 with <kbd>nvm install 14</kbd>.
+<li>Activate node v. 14 with <kbd>nvm use 14</kbd>.
+</ol>
+<h4>Install yeoman for eXist-db</h4>
+  <ol class="instructions">
+    <li>Run <kbd>npm i -g yo</kbd></li>
+    <li>Run <kbd>npm i -g @existdb/generator-exist</kbd></li>
+  </ol>
+<h4>Install ant</h4>
+<p>Run <kbd>brew install ant</kbd></p>
+</div>
+<div>
+<h3>Windows</h3>
+<h4>Windows PowerShell</h4>
+<p>You likely already have this installed. If not, follow the instructions <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3">here</a>.</p>
+<h4>Install Chocolatey</h4>
+<ol class="instructions">
+  <li>Search for Windows PowerShell through the Start Menu. Right click on it and select "Run as Administrator"</li>
+  <li>Run <kbd>Get-ExecutionPolicy</kbd>. If it returns "restricted" then run <kbd>Set-ExecutionPolicy AllSigned</kbd></li>
+  <li>Run <kbd>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</kbd>.</li>
+  <li>Run <kbd>choco</kbd> to test if the install process worked.</li>
+</ol>
+<h4>Install Git and Gitbash</h4>
+<p>Type <kbd>git</kbd>. If it isn't installed, type <kbd>choco install git</kbd>.</p>
+<p>Close Windows PowerShell and open GitBash. Run as administrator. </p>
+<h4>Install NPM and NVM</h4>
+<ol class="instructions">
+  <li>Install NPM with <kbd>choco install npm</kbd>.</li>
+  <li>Install NVM with <kbd>choco install nvm</kbd>.</li>
+  <li>Close GitBash.</li>
+  <li>Open GitBash again, as administrator.</li>
+  <li>Install node v.14 with <kbd>nvm install 14</kbd>. The installation will show you the full version number. <em>Write this down and save for future use.</em></li>
+  <li>Run node v.14 with <kbd>nvm use 14.XXXX</kbd> where XXXX is the version number you wrote down.</li>
+</ol>
+<h4>Install yeoman for eXist-db</h4>
+  <ol class="instructions">
+    <li>Run <kbd>npm i -g yo</kbd></li>
+    <li>Run <kbd>npm i -g @existdb/generator-exist</kbd></li>
+  </ol>
+<h4>Install ant</h4>
+<p>Run <kbd>choco install ant</kbd></p>
+<p>If ant is not found after successful installation, try <kbd>choco install -y -f ant --package-parameters="/User"</kbd> to relocate it.</p>
+</div>
+<div>
+  <h3>Using Yeoman to generate eXist-db applications</h3>
+  <ol class="instructions">
+    <li>On the command line, navigate to the folder where you would like to create a new Git repo.</li>
+    <li>Create a new folder with <kbd>mkdir folder-name</kbd>, where you replace "folder-name" with the name of your project.</li>
+    <li>Open this folder with <kbd>cd folder-name</kbd>.</li>
+    <li>Type <kbd>yo</kbd> and follow the prompts.
+      <ul>
+        <li><em>What would you like to do?</em> @existdb/exist</li>
+        <li><em>What would you like to call your exist-db application?</em> ProjectName
+          <li><em>How should I abbreviate that?</em> ProjectAbbreviation</li>
+    <li><em>Please add a short description?</em> My amazing tmp application</li>
+    <li><em>Pick an app template:</em> empty</li>
+    <li><em>Should your app have a secure area?</em> No</li>
+    <li><em>Will your application be deployed in the apps collection?</em> (hit return for yes) apps (NB: Hit Return; do not type a Y.)</li>
+    <li><em>What should your module namespace begin with?</em> [If your project has a URL, you can use that; otherwise, the default is fine for now.]</li>
+    <li><em>Pick a version number?</em> 1.0.0</li>
+    <li><em>Pick the release status:</em> alpha</li>
+    <li><em>Would you like to generate a pre-install script?</em> Yes</li>
+    <li><em>Would you like to generate a post-install script?</em> Yes</li>
+    <li><em>Who is the author of the application?</em> [Your Name]</li>
+    <li><em>What is your email address?</em> [Your Email Address]</li>
+    <li><em>What is the author's website?</em> [Include if you have one.]</li>
+    <li><em>Please pick a license:</em> MIT </li>
+    <li><em>Will you host your code on GitHub?</em> Yes</li>
+    <li><em>What is your GitHub username?</em> [Your GitHub User Name]</li>
+    <li><em>Would you like to assign db user roles and permissions for your app?</em> No</li>
+    <li><em>Whats your CI service?</em> GitHub Action</li>
+    <li><em>Would you like to use docker for your app?</em> No</li>
+    <li><em>Would you like to add a.existdb.jsonIDE config file for:atom or vs-code?</em> Yes</li>
+    <li><em>What is the eXist instance's URI?</em> http://localhost:8080/exist</li>
+    <li><em>What is user-name of the admin user?</em> admin</li>
+    <li><em>What is the admin user's password?</em> [hidden] (leave the password empty, just press enter)</li>
+  </ul>
+  <li>Build a .xar file by typing <kbd>ant</kbd> at the command line.</li>
+  <li>Start exist-db. Log in with your admin account (user name: admin, password should be blank, unless you set one).</li>
+  <li>Upload the regular .xar file from your "build" folder. </li>
+  <li>Go to the eXist-db Launcher. You should now see your app.</li>
+  <li>At the command line, within the same folder you created and ran Yeoman in, type <kbd>git branch -m main</kbd> to change the git repo's branch name to "main."</li>
+  <li>On GitHub, create a new repository with the same name as the folder you created. DO NOT create a README.</li>
+  <li>Once you have created an empty repository, follow the instructions under "...or push an existing repository from the command line."</li>
+</ol>
+</div>
+<div>
+  <h3>Populating the App</h3>
+  <h4>Add Your Data</h4>
+  <p>Once you have a working app, you can upload your project's .xml files to the "data" folder of your app's git repo. If needed, you can create subfolders for clearer organization.</p>
+  <h4>Add A Controller</h4>
+  <p>Copy the <em>controller.xql</em> file from the P4H GitHub repo to the root directory of your git repo.</p>
+</body>
+</html>

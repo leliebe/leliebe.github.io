@@ -75,7 +75,16 @@ p {
 }
 
 hr.inner_border {
-    width:75%; 
-    margin:0 auto;  
+    width:75%;
+    margin:0 auto;
     border: 2px solid #3495eb;
+}
+
+
+ol.instructions {
+	margin-left: 10%;
+	margin-right: 15%;
+	font-family: "Garamond", serif;
+	font-size: 1em;
+
 }
