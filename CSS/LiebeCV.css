@@ -96,3 +96,22 @@ ol.instructions {
 	font-size: 1em;
 
 }
+
+div.pedagogySection {
+	display: flex;
+	flex-flow: row;
+}
+
+div.pedagogySection > * {
+	padding: 10px;
+	flex: 1 100%;
+}
+
+h2.pedagogyH2 {
+	flex-basis: 100%;
+	text-align: center;
+}
+
+h3.subhead {
+	text-align: center;
+}
