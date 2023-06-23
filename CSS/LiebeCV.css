@@ -46,6 +46,7 @@ h2 {
 }
 
 h2.centered {
+	margin: auto;
 	text-align:center;
 	font-family: "Garamond", serif;
 	font-size: 1.7em;
@@ -97,14 +98,31 @@ ol.instructions {
 
 }
 
-div.pedagogySection {
-	display: flex;
-	flex-flow: row;
+th {
+	font-size: 1.4em;
 }
 
-div.pedagogySection > * {
-	padding: 10px;
-	flex: 1 100%;
+table {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	border-collapse: collapse;
+}
+
+tr {
+	border-bottom: 1px solid;
+}
+
+tr.tableBottom {
+	border-bottom: 0px;
+}
+
+td:first-child {
+	width: 20%
+}
+
+td:last-child {
+	width: 20%
 }
 
 h2.pedagogyH2 {
@@ -113,7 +131,7 @@ h2.pedagogyH2 {
 }
 
 h3.subhead {
-	text-align: center;
+	text-align: left;
 }
 
 kbd {
