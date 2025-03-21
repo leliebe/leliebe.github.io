@@ -194,3 +194,16 @@ li {
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.2em;
 }
+
+img.engine {
+	width: 300px;
+}
+
+seg.engine > h3 {
+	text-align: center;
+}
+
+seg.engine_desc {
+	display: flex;
+	flex-flow: row;
+}
