@@ -1,21 +1,36 @@
 body {
 	background-color: #f9f9f9;
+	margin: 0;
+	padding: 0;
 }
+
+div.nav {
+	position: sticky;
+	background-color: #3495eb;
+	width: 120%;
+	vertical-align: top;
+	margin: 0px;
+	top: 0;
+	overflow: hidden;
+	height: 8%;
+
+}
+
 ul.nav {
 	list-style-type: none;
-  	margin: 0;
-  	padding: 0;
-  	overflow: hidden;
-	background-color: #3495eb;
+	padding-right: 17%;
+	display: flex;
+	justify-content: flex-end;
 }
 
 li.nav {
-	float: right;
+	flex-flow: row;
+
 }
 
 
 li.nav a {
-	font-family: "Garamond", serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 1.5em;
 	display: block;
   	color: white;
@@ -35,53 +50,53 @@ ul.nodot {
 
 h1 {
 	text-align:center;
-	font-family: "Garamond", serif;
-	font-size: 2em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 2.5em;
 }
 
 h2 {
 	margin-left: 5%;
 	margin-right: 10%;
-	font-family: "Garamond", serif;
-	font-size: 1.7em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 2.2em;
 }
 
 h2.centered {
 	margin: auto;
 	text-align:center;
-	font-family: "Garamond", serif;
-	font-size: 1.7em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 2.2em;
 }
 
 h3 {
 	margin-left: 5%;
 	margin-right: 10%;
-	font-family: "Garamond", serif;
-	font-size: 1.5em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 2em;
 	color: #271033;
 }
 
 h4 {
 	margin-left: 7%;
 	margin-right: 10%;
-	font-family: "Garamond", serif;
-	font-size: 1.3em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.7em;
 	color: #931F1D;
 }
 
 h5 {
 	margin-left: 10%;
 	margin-right: 12%
-	font-family: "Garamond", serif;
-	font-size: 1.2em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.7em;
 	color: #271033;
 }
 
 p {
 	margin-left: 7%;
 	margin-right: 10%;
-	font-family: "Garamond", serif;
-	font-size: 1em;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.3em;
 }
 
 hr.inner_border {
@@ -90,11 +105,47 @@ hr.inner_border {
     border: 2px solid #3495eb;
 }
 
+div.toc {
+	display: flex;
+	flex-flow: row;
+	margin-left: 1%;
+}
+
+seg.toc {
+	background-color: #3495eb;
+	color: white;
+	border: 2px solid black;
+	border-radius: 30px;
+	height: 30%;
+	width: 30%
+}
+
+ul.toc {
+	list-style-type: none;
+}
+
+li.toc {
+	font-size: 18px;
+	font-family: "Montserrat", sans-serif;
+}
+
+a.toc {
+	color: white;
+	text-decoration: none;
+}
+
+a.toc:visited {
+	color: white;
+}
+
+a.toc:hover {
+	text-decoration: underline;
+}
 
 ol.instructions {
 	margin-left: 10%;
 	margin-right: 15%;
-	font-family: "Garamond", serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 1em;
 
 }
@@ -137,4 +188,9 @@ h3.subhead {
 
 kbd {
     background-color: #BFC9ED;
+}
+
+li {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.2em;
 }
