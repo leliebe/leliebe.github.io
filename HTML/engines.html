@@ -23,9 +23,95 @@
       <h3><a href="https://bitsy.org/">Bitsy</a></h3>
       <seg class="engine_desc">
         <img class="engine" src="../images/Bitsy.png"/>
-        <p><em>Description:</em> From the developer: "bitsy is a little editor for little games or worlds. the goal is to make it easy to make games where you can walk around and talk to people and be somewhere."</p>
+        <seg>
+          <p><em class="bold">Description:</em> From the developer: "bitsy is a little editor for little games or worlds. the goal is to make it easy to make games where you can walk around and talk to people and be somewhere." Bitsy is an entirely web-based engine.</p>
+          <p><em class="bold">Languages:</em> Bitsy builds HTML files, but no knowledge of HTML is necessary for most purposes.</p>
+          <p><em class="bold">What it's good for:</em> Bitsy works well for simple, story-focused games with a limited color palette and minimal, variable-focused mechanics. The "What you see is what you get" web-based development interface is good for beginner developers.</p>
+          <p><em class="bold">What it doesn't do well:</em> By default, Bitsy is very simple. Any mechanics beyond conversation and single variable-based mechanics (usually inventory-focused) will require either using the engine in creative ways or seeking out additional tools.</p>
+          <ul class="nodot">
+            <li><em class="bold">Additional Resources:</em></li>
+            <li><a href="https://make.bitsy.org/docs/">Bitsy Official Documentation</a></li>
+            <li><a href="https://www.shimmerwitch.space/bitsyTutorial.html">Claire Morwood's Bitsy tutorial</a></li>
+            <li><a href="https://ayolland.itch.io/trevor/devlog/29520/bitsy-variables-a-tutorial">Andrew Yolland's Bitsy variable tutorial</a></li>
+            <li><a href="http://andrewyolland.com/borksy/">Borksy: a hacking tool for Bitsy</a></li>
+          </ul>
+        </seg>
       </seg>
-      <h4>
+    </seg>
+    <hr class="inner_border"/>
+      <seg class="engine">
+      <h3><a href="https://twinery.org/">Twine</a></h3>
+      <seg class="engine_desc">
+        <img class="engine" src="../images/Twine.png"/>
+        <seg>
+          <p><em class="bold">Description:</em> Twine is an HTML-based engine for creating interactive fiction.</p>
+          <p><em class="bold">Languages:</em> Twine games exist as HTML files. Knowledge of CSS and JavaScript allow for more complex games.</p>
+          <p><em class="bold">What it's good for:</em> Twine excels at branching narrative games. It can handle complex variable systems and conditional logic, as well as some multimedia integration. Twine has both a web-based interface and a desktop application.</p>
+          <p><em class="bold">What it doesn't do well:</em> Twine's focus on interactive stories means that it is not sutied for text-light games. Depending on which of the four built-in formats being used, multimedia integration may be complicated. Mechanically, most player-input must be done via hyperlinks.</p>
+          <ul class="nodot">
+            <li><em class="bold">Additional Resources:</em></li>
+            <li><a href="https://twinery.org/reference/en/">Twine Reference Guide</a></li>
+            <li><a href="https://twinery.org/cookbook/">The Twine Cookbook: Documentation and Examples</a></li>
+            <li><a href="https://klembot.github.io/chapbook/guide/">Story Format: Chapbook Documentation</a> Chapbook uses a custom format of "inserts" and "modifiers" rather than macros (used in Harlowe and SugarCube) or JavaScript libraries (used in Snowman).</li>
+            <li><a href="https://twine2.neocities.org/">Story Format: Harlowe Documentation</a> Harlowe is the default story format for Twine.</li>
+            <li><a href="https://videlais.github.io/snowman/#/">Story Format: Snowman Documentation</a> Snowman is designed for those with knowledge of JavaScript libraries.</li>
+            <li><a href="https://www.motoslave.net/sugarcube/2/">Story Format: SugarCube Documentation</a> SugarCube is similar to Harlowe, but requires more experience with programming methodologies.</li>
+          </ul>
+        </seg>
+      </seg>
+    </seg>
+    <hr class="inner_border"/>
+    <h2>Lua Engines</h2>
+      <seg class="engine">
+      <h3><a href="https://love2d.org/">LÖVE</a></h3>
+      <seg class="engine_desc">
+        <!--<img class="engine" src="../images/Twine.png"/>-->
+        <seg>
+          <p><em class="bold">Description:</em> From the developer: "LÖVE is an *awesome* framework you can use to make 2D games in Lua. It's free, open-source, and works on Windows, macOS, Linux, Android and iOS."</p>
+          <p><em class="bold">Languages:</em> Python</p>
+          <p><em class="bold">What it's good for:</em> Making 2D games in a scripting language with a fairly gentle learning curve. LÖVE is also open source, free to use, and has a fairly active development community.</p>
+          <p><em class="bold">What it doesn't do well:</em> 3D games.</p>
+          <ul class="nodot">
+            <li><em class="bold">Additional Resources:</em></li>
+            <li><a href="https://love2d.org/wiki/Main_Page">LÖVE Documentation</a></li>
+          </ul>
+        </seg>
+      </seg>
+    </seg>
+    <hr class="inner_border"/>
+    <h2>Python Engines</h2>
+      <seg class="engine">
+        <h3><a href="https://www.renpy.org/">Ren'Py</a></h3>
+        <seg class="engine_desc">
+          <img class="engine" src="../images/renpy.png"/>
+          <seg>
+            <p><em class="bold">Description:</em> From the developer: "Ren'Py is a visual novel engine – used by thousands of creators from around the world – that helps you use words, images, and sounds to tell interactive stories that run on computers and mobile devices. These can be both visual novels and life simulation games. The easy to learn script language allows anyone to efficiently write large visual novels, while its Python scripting is enough for complex simulation games."</p>
+            <p><em class="bold">Languages:</em> Python</p>
+            <p><em class="bold">What it's good for:</em> Making visual novels</p>
+            <p><em class="bold">What it doesn't do well:</em> Anything other than visual novels.</p>
+            <ul class="nodot">
+              <li><em class="bold">Additional Resources:</em></li>
+              <li><a href="https://www.renpy.org/doc/html/quickstart.html">Ren'Py Quickstart Guide</a></li>
+              <li><a href="https://www.renpy.org/doc/html/">Ren'Py Reference Manual</a></li>
+            </ul>
+          </seg>
+        </seg>
+      </seg>
+      <seg class="engine">
+      <h3><a href="https://www.ursinaengine.org/">Ursina Engine</a></h3>
+      <seg class="engine_desc">
+        <img class="engine" src="../images/Ursina.png"/>
+        <seg>
+          <p><em class="bold">Description:</em> <!--From the developer: "LÖVE is an *awesome* framework you can use to make 2D games in Lua. It's free, open-source, and works on Windows, macOS, Linux, Android and iOS."--></p>
+          <p><em class="bold">Languages:</em> Python</p>
+          <p><em class="bold">What it's good for:</em><!-- Making 2D games in a scripting language with a fairly gentle learning curve. LÖVE is also open source, free to use, and has a fairly active development community.--></p>
+          <p><em class="bold">What it doesn't do well:</em> <!--3D games.--></p>
+          <ul class="nodot">
+            <li><em class="bold">Additional Resources:</em></li>
+            <li><a href="https://www.ursinaengine.org/documentation.html">Ursina Documentation</a></li>
+          </ul>
+        </seg>
+      </seg>
     </seg>
   </body>
 </html>

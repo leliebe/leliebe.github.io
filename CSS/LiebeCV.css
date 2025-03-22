@@ -196,7 +196,8 @@ li {
 }
 
 img.engine {
-	width: 300px;
+	object-fit: contain;
+	width: 400px;
 }
 
 seg.engine > h3 {
@@ -206,4 +207,21 @@ seg.engine > h3 {
 seg.engine_desc {
 	display: flex;
 	flex-flow: row;
+	padding-left: 5%;
+	align-content: space-evenly;
+}
+
+em.bold {
+	font-style: normal;
+	font-weight: bold;
+}
+
+p.small {
+	font-size: 1em;
+}
+
+p.center {
+	text-align: center;
+	padding-left: 15em;
+	padding-right: 15em;
 }
